@@ -679,7 +679,7 @@ address .link {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 20px;
-    /* padding-bottom: 20px; */
+    
     color: #FFFFFF;
 }
 
@@ -723,6 +723,88 @@ address .link {
 
 .soc-items-join:not(:last-child) {
     margin-right: 10px;
+}
+
+/* ПРИЄДНУЙТЕСЬ кінець */
+
+
+/* ПІДПИШІТЬСЯ НА РОЗСИЛКУ */
+
+.forma {
+    margin-left: auto;
+}
+
+.form-bottom {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-text {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    
+    color: #FFFFFF;
+}
+
+.forma-email {
+    display: flex;
+    align-items: center;
+    
+}
+
+.forma-email-input{
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #2F303A;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.forma-button-submit {
+    display: flex;
+    width: 200px;
+    height: 50px;
+
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    
+    margin-left: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+        
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+}
+
+
+
+.forma-button-text {
+    font-size: 16px;
+    line-height: 1.88;
+       
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+.forma-icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -814,8 +896,6 @@ address .link {
     
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-
 
 
 .project-description {
@@ -950,6 +1030,8 @@ ul {
     height: 18px;
 }
 
+
+
 .close {
     position: absolute;
     width: 30px;
@@ -958,9 +1040,19 @@ ul {
     top: 8px;
     padding: 0;
     border-radius: 50%;
+    cursor: pointer;
        
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .close:focus {
+    color: #2196F3;
+} */
+
+.close:hover{
+    fill: #2196F3;
 }
 
 /* Залиште свої дані, ми вам передзвонимо */
@@ -982,6 +1074,7 @@ ul {
 }
 
 .form-field {
+    
     display: flex;
     flex-direction: column;
     margin-bottom: 28px;
@@ -995,13 +1088,24 @@ ul {
 }
 
 .form-field input {
-    margin: 0;
-    padding: 0;
-
+    display: inline-block;
+    width: 448px;
     height: 40px;
-
+    padding: 0 0 0 40px;
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.form-field input:focus {
+    border-color: #2196F3;
+}
+
+.form-field input:focus + svg {
+    fill: #2196F3;
 }
 
 .form-field input::placeholder {
@@ -1011,14 +1115,85 @@ ul {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.comment {
-    
-    padding: 12, 16;
+
+input, textarea {
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-textarea {
+.comment {
+    display: block;
+    width: 448px;
+    height: 120px;
+    outline: none;
+    cursor: pointer;
+
     resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-field textarea:focus {
+    border-color: #2196F3;
+}
+
+.modal-politic-label {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.modal-politic-label::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #131111;
+    margin-right: 7px;
+
+}
+
+.modal-politic-check:checked + label::before {
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url(../images/check.svg);
+    background-position: center;
+    background-color: #2196F3;
+    border-radius: 2px;
+}
+
+.form-field-check .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.form-field-check {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.a-modal {
+   color: #2196F3; 
+}
+
+
+
 
 .form-submit {
     display: flex;
@@ -1044,4 +1219,22 @@ textarea {
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #1976d2;
+}
+
+.modal-input-wrapper {
+    position: relative;
+}
+
+.icon-modal {
+    position: absolute;
+
+    top: 50%;
+    left: 12px;
+
+    transform: translateY(-50%);
 }
